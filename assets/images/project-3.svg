@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="p3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#141f36" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#p3Grad)" />
+
+  <!-- App Window -->
+  <rect x="40" y="30" width="520" height="300" rx="12" fill="#131d31" stroke="#334155" stroke-width="1.5" />
+  <circle cx="65" cy="52" r="5" fill="#ef4444" />
+  <circle cx="82" cy="52" r="5" fill="#f59e0b" />
+  <circle cx="99" cy="52" r="5" fill="#10b981" />
+  <text x="300" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">TaskFlow Manager — Productivity Dashboard</text>
+  <line x1="40" y1="72" x2="560" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Columns / Kanban style cards -->
+  <!-- Column 1: In Progress -->
+  <rect x="65" y="90" width="220" height="215" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+  <text x="80" y="115" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#38bdf8">⚡ Active Tasks (3)</text>
+  
+  <!-- Task Card 1 -->
+  <rect x="75" y="130" width="200" height="48" rx="6" fill="#1e293b" />
+  <circle cx="92" cy="154" r="7" fill="none" stroke="#6366f1" stroke-width="2" />
+  <text x="110" y="152" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">DSA: Linked Lists in C</text>
+  <text x="110" y="167" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Priority: High • Semester Prep</text>
+
+  <!-- Task Card 2 -->
+  <rect x="75" y="188" width="200" height="48" rx="6" fill="#1e293b" />
+  <circle cx="92" cy="212" r="7" fill="none" stroke="#06b6d4" stroke-width="2" />
+  <text x="110" y="210" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">Build Portfolio Components</text>
+  <text x="110" y="225" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Frontend • Vanilla CSS3</text>
+
+  <!-- Task Card 3 -->
+  <rect x="75" y="246" width="200" height="48" rx="6" fill="#1e293b" />
+  <circle cx="92" cy="270" r="7" fill="none" stroke="#f59e0b" stroke-width="2" />
+  <text x="110" y="268" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">Smart India Hackathon</text>
+  <text x="110" y="283" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Idea PPT &amp; Prototype Planning</text>
+
+  <!-- Column 2: Completed -->
+  <rect x="315" y="90" width="220" height="215" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+  <text x="330" y="115" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#34d399">✅ Completed (5)</text>
+
+  <!-- Completed Card 1 -->
+  <rect x="325" y="130" width="200" height="48" rx="6" fill="#162238" />
+  <circle cx="342" cy="154" r="7" fill="#10b981" />
+  <path d="M339 154 L341 156 L345 152" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <text x="360" y="152" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" text-decoration="line-through">Python Control Flow</text>
+  <text x="360" y="167" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Completed Oct 10</text>
+
+  <!-- Completed Card 2 -->
+  <rect x="325" y="188" width="200" height="48" rx="6" fill="#162238" />
+  <circle cx="342" cy="212" r="7" fill="#10b981" />
+  <path d="M339 212 L341 214 L345 210" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <text x="360" y="210" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" text-decoration="line-through">Git &amp; GitHub Setup</text>
+  <text x="360" y="225" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Repo configured &amp; SSH key</text>
+
+  <!-- Progress bar -->
+  <rect x="325" y="258" width="200" height="8" rx="4" fill="#1e293b" />
+  <rect x="325" y="258" width="160" height="8" rx="4" fill="url(#emeraldGrad)" />
+  <text x="325" y="284" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Sprint Productivity: 80%</text>
+</svg>

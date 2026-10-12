@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="p2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="pyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#p2Grad)" />
+  
+  <!-- Terminal Window -->
+  <rect x="40" y="30" width="520" height="300" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5" />
+  <!-- Terminal Header -->
+  <circle cx="65" cy="52" r="5" fill="#ef4444" />
+  <circle cx="82" cy="52" r="5" fill="#f59e0b" />
+  <circle cx="99" cy="52" r="5" fill="#10b981" />
+  <text x="300" y="56" font-family="'Fira Code', monospace" font-size="11" fill="#8b949e" text-anchor="middle">grade_analyzer.py — Python 3.12</text>
+  <line x1="40" y1="72" x2="560" y2="72" stroke="#21262d" stroke-width="1.5" />
+  
+  <!-- Terminal Content / Code & Output -->
+  <text x="65" y="105" font-family="'Fira Code', monospace" font-size="13" fill="#8b949e">&gt;&gt;&gt; python analyzer.py --semester 1</text>
+  <text x="65" y="132" font-family="'Fira Code', monospace" font-size="13" fill="#58a6ff">[+] Loaded record: CSE_JECRC_Batch2023.csv</text>
+  <text x="65" y="158" font-family="'Fira Code', monospace" font-size="13" fill="#7ee787">[SUCCESS] Calculated SGPA &amp; Subject Statistics:</text>
+
+  <!-- Metric boxes -->
+  <rect x="65" y="180" width="140" height="75" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+  <text x="80" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#8b949e">Current SGPA</text>
+  <text x="80" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="26" font-weight="800" fill="#38bdf8">9.42</text>
+
+  <rect x="220" y="180" width="140" height="75" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+  <text x="235" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#8b949e">Top Performer</text>
+  <text x="235" y="235" font-family="'Fira Code', monospace" font-size="14" font-weight="700" fill="#a78bfa">Python &amp; C</text>
+
+  <rect x="375" y="180" width="150" height="75" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+  <text x="390" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#8b949e">Export Format</text>
+  <text x="390" y="235" font-family="'Fira Code', monospace" font-size="14" font-weight="700" fill="#34d399">CSV / JSON</text>
+
+  <!-- Execution prompt -->
+  <text x="65" y="295" font-family="'Fira Code', monospace" font-size="13" fill="#58a6ff">&gt;&gt;&gt; </text>
+  <rect x="105" y="284" width="8" height="15" fill="#58a6ff" opacity="0.8" />
+  <text x="125" y="295" font-family="'Fira Code', monospace" font-size="12" fill="#8b949e">Ready for batch execution...</text>
+</svg>

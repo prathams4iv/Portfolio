@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ===================================================================
+       SEO & META TAGS
+       =================================================================== -->
+  <title>Pratham Srivastava | Front End Developer & B.Tech CSE Student</title>
+  <meta name="description" content="Portfolio of Pratham Srivastava - First-Year B.Tech CSE student at JECRC University, Front End Developer, Python enthusiast, and Smart India Hackathon participant.">
+  <meta name="keywords" content="Pratham Srivastava, Portfolio, Front End Developer, B.Tech CSE, JECRC University, Python, C, Web Development, Jaipur">
+  <meta name="author" content="Pratham Srivastava">
+  <meta name="theme-color" content="#070a13">
+
+  <!-- Open Graph / LinkedIn / Social Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prathams4iv.github.io/portfolio/">
+  <meta property="og:title" content="Pratham Srivastava | Front End Developer Portfolio">
+  <meta property="og:description" content="Explore projects, technical competencies, and the academic journey of Pratham Srivastava.">
+  <meta property="og:image" content="assets/images/profile-avatar.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pratham Srivastava | Portfolio">
+  <meta name="twitter:description" content="First-Year B.Tech CSE Student & Front End Developer at JECRC University.">
+  <meta name="twitter:image" content="assets/images/profile-avatar.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) + Inter (Body) + Fira Code (Monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Background Ambient Glow & Grid Mesh -->
+  <div class="bg-grid-mesh" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Toast Notification System (For Copy Email, Feedback) -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toast-message">Notification message</span>
+  </div>
+
+  <!-- ===================================================================
+       1. NAVBAR (Sticky Glassmorphic Header with Active Scrollspy)
+       =================================================================== -->
+  <header class="navbar-wrapper" id="navbar-header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" aria-label="Pratham Srivastava - Home">
+        <div class="brand-monogram">PS</div>
+        <div class="brand-text">
+          <span class="brand-name">Pratham</span>
+          <span class="brand-role">Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#education-skills" class="nav-link" role="menuitem">Education &amp; Skills</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#achievements" class="nav-link" role="menuitem">Achievements</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <!-- Navbar Controls -->
+      <div class="nav-actions">
+        <!-- Status Pill -->
+        <div class="nav-status-pill desktop-only" title="Open for internships and collaborative projects">
+          <span class="status-dot"></span>
+          <span>Open to Opportunities</span>
+        </div>
+
+        <!-- Background Palette Switcher -->
+        <div class="palette-picker" id="palette-picker">
+          <button class="palette-btn" id="palette-btn" aria-label="Select background color theme" title="Background color palette">
+            <i class="fa-solid fa-palette"></i>
+          </button>
+          <div class="palette-dropdown" id="palette-dropdown">
+            <div class="palette-title">Background Theme</div>
+            <div class="palette-options">
+              <button class="palette-option" data-color="navy" type="button">
+                <span class="color-preview preview-navy"></span>
+                <span>Midnight Navy</span>
+              </button>
+              <button class="palette-option" data-color="obsidian" type="button">
+                <span class="color-preview preview-obsidian"></span>
+                <span>Obsidian Carbon</span>
+              </button>
+              <button class="palette-option active" data-color="cyber" type="button">
+                <span class="color-preview preview-cyber"></span>
+                <span>Cyber Teal</span>
+              </button>
+              <button class="palette-option" data-color="indigo" type="button">
+                <span class="color-preview preview-indigo"></span>
+                <span>Deep Indigo</span>
+              </button>
+              <button class="palette-option" data-color="slate" type="button">
+                <span class="color-preview preview-slate"></span>
+                <span>Slate 900</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Light / Dark Theme Switcher -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle between dark and light themes" title="Toggle theme">
+          <i class="fa-solid fa-moon moon-icon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun sun-icon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================================================================
+         2. HOME (HERO SECTION - High Tech Engineering Layout)
+         =================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left: Intro & Copy -->
+        <div class="hero-content">
+          <div class="hero-pill reveal">
+            <span class="pulse-indicator"></span>
+            <span class="pill-text">1st Year B.Tech CSE • JECRC University</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            Hello, I'm <br>
+            <span class="gradient-text glow-text">Pratham Srivastava</span>
+          </h1>
+
+          <div class="hero-role-wrapper reveal">
+            <span class="role-lead">&gt;</span>
+            <span class="role-fixed">Specializing in</span>
+            <span id="typewriter" class="typewriter-text"></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-bio reveal">
+            A focused software enthusiast building clean, accessible, and responsive user interfaces. Pairing algorithmic curiosity in C and Python with modern frontend design principles.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta-group reveal">
+            <a href="#projects" class="btn btn-primary glow-btn">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="assets/resume/Pratham_Srivastava_Resume.pdf" class="btn btn-glass" download="Pratham_Srivastava_Resume.pdf" id="resume-download-btn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Quick Stat Metrics Ribbon -->
+          <div class="hero-stats-ribbon reveal">
+            <div class="stat-item">
+              <span class="stat-number">1<sup>st</sup> Year</span>
+              <span class="stat-label">B.Tech CSE</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Core Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">SIH '24</span>
+              <span class="stat-label">Hackathon</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Focus &amp; Drive</span>
+            </div>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="hero-socials reveal">
+            <span class="social-tag">Find me on:</span>
+            <div class="social-links-row">
+              <a href="https://github.com/prathams4iv" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/pratham-srivastava-57875731b/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <button class="social-chip copy-email-btn" data-email="prathamsrivastava63@gmail.com" title="Copy email address" aria-label="Copy email address">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy Email</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Modern Developer Code Showcase & Avatar Hybrid -->
+        <div class="hero-terminal-wrapper reveal">
+          <div class="terminal-card">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+              <div class="terminal-controls">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <div class="terminal-title">
+                <i class="fa-solid fa-code"></i> developer_profile.js
+              </div>
+              <div class="terminal-badge">LIVE</div>
+            </div>
+
+            <!-- Terminal Body Code -->
+            <div class="terminal-body">
+              <pre><code><span class="c-keyword">const</span> <span class="c-variable">engineer</span> = {
+  <span class="c-prop">name</span>: <span class="c-string">"Pratham Srivastava"</span>,
+  <span class="c-prop">degree</span>: <span class="c-string">"B.Tech in CSE"</span>,
+  <span class="c-prop">institution</span>: <span class="c-string">"JECRC University, Jaipur"</span>,
+  <span class="c-prop">stack</span>: {
+    <span class="c-prop">languages</span>: [<span class="c-string">"C"</span>, <span class="c-string">"Python"</span>, <span class="c-string">"JavaScript"</span>],
+    <span class="c-prop">frontend</span>: [<span class="c-string">"HTML5"</span>, <span class="c-string">"CSS3"</span>, <span class="c-string">"Vanilla JS"</span>],
+    <span class="c-prop">tools</span>: [<span class="c-string">"Git"</span>, <span class="c-string">"GitHub"</span>, <span class="c-string">"VS Code"</span>]
+  },
+  <span class="c-prop">status</span>: <span class="c-string">"Active Learner &amp; Problem Solver"</span>,
+  <span class="c-prop">openForWork</span>: <span class="c-bool">true</span>
+};
+
+<span class="c-comment">// Execute continuous learning cycle</span>
+<span class="c-variable">engineer</span>.<span class="c-function">learnAndBuild</span>();</code></pre>
+            </div>
+
+            <!-- Embedded Profile Footnote -->
+            <div class="terminal-footer">
+              <div class="profile-mini">
+                <img src="assets/images/profile-avatar.svg" alt="Pratham Srivastava profile illustration" width="44" height="44" class="mini-avatar">
+                <div class="mini-info">
+                  <span class="mini-name">Pratham Srivastava</span>
+                  <span class="mini-role">Ready to collaborate</span>
+                </div>
+              </div>
+              <div class="status-indicator-badge">
+                <span class="status-dot"></span> Available
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-down-wrapper" aria-label="Scroll down to About section">
+        <span class="scroll-text">EXPLORE WORK</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+
+    <!-- ===================================================================
+         3. ABOUT ME (Modern Bento Grid Architecture)
+         =================================================================== -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <i class="fa-regular fa-id-badge"></i> Personal Overview
+          </div>
+          <h2 class="section-heading">About <span class="gradient-text">Me</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtext">A snapshot of my background, engineering mindset, and current collegiate trajectory.</p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+          
+          <!-- Bento 1: Primary Bio Statement -->
+          <div class="bento-card bento-bio reveal">
+            <div class="card-glow-layer"></div>
+            <div class="bento-badge">
+              <i class="fa-solid fa-sparkles text-accent"></i> Core Philosophy
+            </div>
+            <h3 class="bento-headline">
+              Curiosity-led engineering with deep dedication to quality execution.
+            </h3>
+            <!-- Requested exact bio statement embedded -->
+            <p class="bio-lead">
+              I am a Coding enthusiast with a keen interest for learning. Always open to give it all to my work and be focused about it.
+            </p>
+            <p class="bio-sub">
+              As a first-year Computer Science Engineering student at JECRC University, I enjoy breaking down algorithmic challenges into structured C and Python programs, while designing sleek, responsive web interfaces with semantic markup and modern CSS.
+            </p>
+            <div class="bento-signature">
+              <span class="mono-tag">&lt;passion-for-code /&gt;</span>
+              <span class="mono-tag">&lt;disciplined-learner /&gt;</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: Profile Visual & Status -->
+          <div class="bento-card bento-profile reveal">
+            <div class="card-glow-layer"></div>
+            <div class="profile-frame">
+              <div class="avatar-ring">
+                <img src="assets/images/profile-avatar.svg" alt="Pratham Srivastava developer avatar" class="bento-avatar" width="160" height="160">
+              </div>
+              <div class="profile-card-details">
+                <h4 class="profile-name">Pratham Srivastava</h4>
+                <p class="profile-title">B.Tech CSE Undergraduate</p>
+                <div class="active-badge">
+                  <span class="status-dot"></span> Student &amp; Builder
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Quick Facts Matrix -->
+          <div class="bento-card bento-fact reveal">
+            <div class="card-glow-layer"></div>
+            <div class="fact-top">
+              <div class="fact-icon-box icon-cyan">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <span class="fact-meta">Base Location</span>
+            </div>
+            <div class="fact-main">
+              <h4 class="fact-heading">Jaipur, India</h4>
+              <p class="fact-subtext">Rajasthan • UTC+05:30</p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-fact reveal">
+            <div class="card-glow-layer"></div>
+            <div class="fact-top">
+              <div class="fact-icon-box icon-indigo">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <span class="fact-meta">Academic Home</span>
+            </div>
+            <div class="fact-main">
+              <h4 class="fact-heading">JECRC University</h4>
+              <p class="fact-subtext">Computer Science &amp; Engineering</p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-fact reveal">
+            <div class="card-glow-layer"></div>
+            <div class="fact-top">
+              <div class="fact-icon-box icon-emerald">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <span class="fact-meta">Primary Focus</span>
+            </div>
+            <div class="fact-main">
+              <h4 class="fact-heading">Frontend &amp; DSA</h4>
+              <p class="fact-subtext">Modern Web • Problem Solving</p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-fact reveal">
+            <div class="card-glow-layer"></div>
+            <div class="fact-top">
+              <div class="fact-icon-box icon-amber">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <span class="fact-meta">Collaboration</span>
+            </div>
+            <div class="fact-main">
+              <h4 class="fact-heading">Hackathons &amp; Teams</h4>
+              <p class="fact-subtext">Open Source • Peer Projects</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         4. EDUCATION & SKILLS (Interactive Filtering & Animated Meters)
+         =================================================================== -->
+    <section id="education-skills" class="section-padding section-alt">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <i class="fa-solid fa-graduation-cap"></i> Academic &amp; Technical Foundation
+          </div>
+          <h2 class="section-heading">Education &amp; <span class="gradient-text">Skills</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtext">Structured timeline of my formal education paired with practical proficiency benchmarks.</p>
+        </div>
+
+        <div class="edu-skills-grid">
+          
+          <!-- Left: Education Timeline Column -->
+          <div class="edu-column reveal">
+            <div class="column-header">
+              <div class="col-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3 class="col-title">Education Journey</h3>
+            </div>
+
+            <div class="timeline-container">
+              
+              <!-- Item 1: JECRC B.Tech -->
+              <div class="timeline-card-item">
+                <div class="timeline-marker">
+                  <div class="marker-dot"></div>
+                </div>
+                <div class="timeline-box">
+                  <div class="timeline-header-wrap">
+                    <span class="year-pill active-pill">2023 – 2027 (Expected)</span>
+                    <span class="location-tag"><i class="fa-solid fa-map-pin"></i> Jaipur</span>
+                  </div>
+                  <h4 class="timeline-degree">B.Tech in Computer Science &amp; Engineering</h4>
+                  <h5 class="timeline-school">JECRC University</h5>
+                  <p class="timeline-text">
+                    Immersed in first-year engineering coursework encompassing Programming in C, Python foundations, discrete mathematics, and web fundamentals. Actively participating in collegiate hackathon initiatives.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="t-tag">Semester 1 &amp; 2</span>
+                    <span class="t-tag">Problem Solving</span>
+                    <span class="t-tag">Foundational CS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Senior Secondary -->
+              <!-- EDITABLE: Replace with your schooling details -->
+              <div class="timeline-card-item">
+                <div class="timeline-marker">
+                  <div class="marker-dot"></div>
+                </div>
+                <div class="timeline-box">
+                  <div class="timeline-header-wrap">
+                    <span class="year-pill">2021 – 2023</span>
+                    <span class="location-tag"><i class="fa-solid fa-school"></i> High School</span>
+                  </div>
+                  <h4 class="timeline-degree">Higher Secondary Education (Class XII - PCM)</h4>
+                  <h5 class="timeline-school">Senior Secondary School</h5>
+                  <p class="timeline-text">
+                    Rigorous secondary education with a major focus in Physics, Chemistry, and Mathematics. Built quantitative reasoning and logical analysis fundamentals.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="t-tag">Science Stream</span>
+                    <span class="t-tag">Mathematics</span>
+                    <span class="t-tag">Analytical Logic</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Categorized Skills Column with Filter Tabs -->
+          <div class="skills-column reveal">
+            <div class="column-header">
+              <div class="col-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+              <h3 class="col-title">Technical Competencies</h3>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="skill-filter-tabs" role="tablist">
+              <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button class="filter-tab" data-filter="programming" role="tab" aria-selected="false">Languages</button>
+              <button class="filter-tab" data-filter="web" role="tab" aria-selected="false">Web Dev</button>
+              <button class="filter-tab" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+              <button class="filter-tab" data-filter="soft" role="tab" aria-selected="false">Soft Skills</button>
+            </div>
+
+            <!-- Skills Cards Grid -->
+            <div class="skills-list-grid">
+
+              <!-- Programming: Python -->
+              <div class="skill-spec-card" data-category="programming">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-python">
+                    <i class="fa-brands fa-python"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">Python</h4>
+                    <span class="skill-level-badge">Proficient • 75%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="75%"></div>
+                </div>
+                <span class="skill-note">Syntax, lists/dicts, loops, file I/O &amp; scripting</span>
+              </div>
+
+              <!-- Programming: C -->
+              <div class="skill-spec-card" data-category="programming">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-c">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">C Programming</h4>
+                    <span class="skill-level-badge">Core • 70%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="70%"></div>
+                </div>
+                <span class="skill-note">Pointers, memory basics, arrays, modular functions</span>
+              </div>
+
+              <!-- Web: HTML5 -->
+              <div class="skill-spec-card" data-category="web">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-html">
+                    <i class="fa-brands fa-html5"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">HTML5 &amp; Semantic SEO</h4>
+                    <span class="skill-level-badge">Advanced • 85%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="85%"></div>
+                </div>
+                <span class="skill-note">Accessible DOM hierarchy, SEO meta tags, ARIA</span>
+              </div>
+
+              <!-- Web: CSS3 -->
+              <div class="skill-spec-card" data-category="web">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">CSS3 &amp; Flexbox / Grid</h4>
+                    <span class="skill-level-badge">Proficient • 80%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="80%"></div>
+                </div>
+                <span class="skill-note">Variables, responsive design, keyframes, transitions</span>
+              </div>
+
+              <!-- Web: JavaScript -->
+              <div class="skill-spec-card" data-category="web">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-js">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">JavaScript (ES6+)</h4>
+                    <span class="skill-level-badge">Foundations • 65%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="65%"></div>
+                </div>
+                <span class="skill-note">DOM manipulation, event handling, LocalStorage</span>
+              </div>
+
+              <!-- Tools: Git & GitHub -->
+              <div class="skill-spec-card" data-category="tools">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-git">
+                    <i class="fa-brands fa-git-alt"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">Git &amp; GitHub</h4>
+                    <span class="skill-level-badge">Workflow • 75%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="75%"></div>
+                </div>
+                <span class="skill-note">Branching, commits, pull requests, GitHub Pages</span>
+              </div>
+
+              <!-- Tools: VS Code & CLI -->
+              <div class="skill-spec-card" data-category="tools">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-vscode">
+                    <i class="fa-solid fa-terminal"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">VS Code &amp; PowerShell</h4>
+                    <span class="skill-level-badge">Daily Driver • 80%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="80%"></div>
+                </div>
+                <span class="skill-note">Workspace configs, terminal commands, debugging</span>
+              </div>
+
+              <!-- Soft Skills: Teamwork & Communication -->
+              <div class="skill-spec-card" data-category="soft">
+                <div class="card-glow-layer"></div>
+                <div class="skill-head">
+                  <div class="skill-brand-icon icon-soft">
+                    <i class="fa-solid fa-users-gear"></i>
+                  </div>
+                  <div class="skill-title-wrap">
+                    <h4 class="skill-heading">Teamwork &amp; Communication</h4>
+                    <span class="skill-level-badge">High • 85%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-bar" data-progress="85%"></div>
+                </div>
+                <span class="skill-note">Peer collaboration, hackathon sprint coordination</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         5. PROJECTS (High Polish Engineering Showcase Grid)
+         =================================================================== -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <i class="fa-solid fa-laptop-code"></i> Engineering Portfolio
+          </div>
+          <h2 class="section-heading">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtext">Selected real-world works demonstrating clean code organization, problem solving, and modern frontend styling.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filter-bar reveal">
+          <button class="p-filter-btn active" data-filter="all">All Projects (3)</button>
+          <button class="p-filter-btn" data-filter="web">Web Development</button>
+          <button class="p-filter-btn" data-filter="python">Python &amp; Logic</button>
+        </div>
+
+        <div class="projects-master-grid">
+
+          <!-- PROJECT CARD 1: Portfolio -->
+          <!-- EDITABLE: Replace with your project details -->
+          <article class="project-item-card reveal" data-category="web">
+            <div class="card-glow-layer"></div>
+            
+            <!-- Project Mock Window Topbar -->
+            <div class="proj-mock-top">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="proj-slug">github.com/prathams4iv/portfolio</span>
+              <span class="proj-status-badge badge-prod">Live System</span>
+            </div>
+
+            <!-- Project Image Frame -->
+            <div class="proj-img-wrap">
+              <img src="assets/images/project-1.svg" alt="Screenshot of Personal Developer Portfolio" class="proj-img" loading="lazy">
+              <div class="proj-overlay-tags">
+                <span class="overlay-tag">v2.0 Architecture</span>
+              </div>
+            </div>
+
+            <!-- Project Body -->
+            <div class="proj-body">
+              <div class="proj-tags-list">
+                <span class="tag-pill">HTML5</span>
+                <span class="tag-pill">CSS3</span>
+                <span class="tag-pill">Vanilla JS</span>
+                <span class="tag-pill">GitHub Pages</span>
+              </div>
+
+              <h3 class="proj-title">Personal Developer Portfolio</h3>
+              <p class="proj-summary">
+                A modern single-page portfolio engineered with pure HTML/CSS/JS. Features dark/light themes with localStorage persistence, interactive typing hero, animated skill progress, and client-side contact validation.
+              </p>
+
+              <!-- Feature Highlights -->
+              <ul class="proj-features">
+                <li><i class="fa-solid fa-check text-accent"></i> Zero build step; 100% GitHub Pages ready</li>
+                <li><i class="fa-solid fa-check text-accent"></i> Fully responsive across mobile, tablet, and wide desktop</li>
+              </ul>
+
+              <!-- Card Action Buttons -->
+              <div class="proj-foot-actions">
+                <a href="https://github.com/prathams4iv/portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+                <a href="#home" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Live Preview</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 2: Student Grade Analyzer in Python -->
+          <!-- EDITABLE: Replace with your project details -->
+          <article class="project-item-card reveal" data-category="python">
+            <div class="card-glow-layer"></div>
+
+            <div class="proj-mock-top">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="proj-slug">github.com/prathams4iv/grade-analyzer</span>
+              <span class="proj-status-badge badge-acad">Academic Tool</span>
+            </div>
+
+            <div class="proj-img-wrap">
+              <img src="assets/images/project-2.svg" alt="Screenshot of Python Student Grade Analyzer" class="proj-img" loading="lazy">
+              <div class="proj-overlay-tags">
+                <span class="overlay-tag">Python 3.12</span>
+              </div>
+            </div>
+
+            <div class="proj-body">
+              <div class="proj-tags-list">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">File I/O</span>
+                <span class="tag-pill">CSV / JSON</span>
+                <span class="tag-pill">CLI Utility</span>
+              </div>
+
+              <h3 class="proj-title">Student Performance &amp; SGPA Analyzer</h3>
+              <p class="proj-summary">
+                A Python utility that ingests collegiate course records, computes semester SGPA/CGPA percentiles, analyzes grade trends, and outputs structured statistical analytics to both terminal and CSV reports.
+              </p>
+
+              <ul class="proj-features">
+                <li><i class="fa-solid fa-check text-accent"></i> Automated calculations based on standard credit matrices</li>
+                <li><i class="fa-solid fa-check text-accent"></i> Robust input validation and error recovery</li>
+              </ul>
+
+              <div class="proj-foot-actions">
+                <a href="https://github.com/prathams4iv" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Repository</span>
+                </a>
+                <a href="#contact" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-terminal"></i>
+                  <span>View Details</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 3: TaskFlow Manager -->
+          <!-- EDITABLE: Replace with your project details -->
+          <article class="project-item-card reveal" data-category="web">
+            <div class="card-glow-layer"></div>
+
+            <div class="proj-mock-top">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="proj-slug">github.com/prathams4iv/taskflow</span>
+              <span class="proj-status-badge badge-app">Web App</span>
+            </div>
+
+            <div class="proj-img-wrap">
+              <img src="assets/images/project-3.svg" alt="Screenshot of TaskFlow Goal Tracker" class="proj-img" loading="lazy">
+              <div class="proj-overlay-tags">
+                <span class="overlay-tag">Productivity</span>
+              </div>
+            </div>
+
+            <div class="proj-body">
+              <div class="proj-tags-list">
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">LocalStorage</span>
+                <span class="tag-pill">DOM Engine</span>
+                <span class="tag-pill">Responsive</span>
+              </div>
+
+              <h3 class="proj-title">TaskFlow: Interactive Goal Tracker</h3>
+              <p class="proj-summary">
+                A lightweight productivity dashboard designed for college students to organize daily academic objectives, categorize tasks by priority, track completion percentages, and persist state in the browser.
+              </p>
+
+              <ul class="proj-features">
+                <li><i class="fa-solid fa-check text-accent"></i> Real-time completion progress tracking meter</li>
+                <li><i class="fa-solid fa-check text-accent"></i> Seamless offline storage via HTML5 LocalStorage</li>
+              </ul>
+
+              <div class="proj-foot-actions">
+                <a href="https://github.com/prathams4iv" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Repository</span>
+                </a>
+                <a href="#contact" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Explore App</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         6. CERTIFICATIONS & ACHIEVEMENTS (Featured Distinction Layout)
+         =================================================================== -->
+    <section id="achievements" class="section-padding section-alt">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <i class="fa-solid fa-award"></i> Milestones &amp; Credentials
+          </div>
+          <h2 class="section-heading">Certifications &amp; <span class="gradient-text">Achievements</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtext">Competitive hackathon participation and validated technical credentials.</p>
+        </div>
+
+        <div class="achieve-layout-grid">
+          
+          <!-- FEATURED HIGHLIGHT: Smart India Hackathon -->
+          <div class="achieve-banner-card reveal">
+            <div class="card-glow-layer"></div>
+            
+            <div class="banner-left">
+              <div class="trophy-badge-wrap">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="banner-tag">PREMIER NATIONAL HACKATHON</div>
+            </div>
+
+            <div class="banner-center">
+              <div class="banner-meta-row">
+                <span class="org-pill"><i class="fa-solid fa-landmark"></i> MoE / SIH Chapter</span>
+                <span class="year-chip">2024</span>
+              </div>
+              <h3 class="banner-title">Smart India Hackathon (SIH)</h3>
+              <p class="banner-summary">
+                Participated in India's premier nationwide innovation challenge. Collaborated in an intensive collegiate sprint team to brainstorm, formulate system architecture, draft user workflows, and present an impactful software prototype addressing real-world problem statements.
+              </p>
+              <div class="banner-highlights">
+                <span class="b-chip"><i class="fa-solid fa-users"></i> Team Synergy</span>
+                <span class="b-chip"><i class="fa-solid fa-lightbulb"></i> Rapid Prototyping</span>
+                <span class="b-chip"><i class="fa-solid fa-bullseye"></i> Problem Framing</span>
+              </div>
+            </div>
+
+            <div class="banner-right">
+              <span class="verified-status">
+                <i class="fa-solid fa-circle-check"></i> College Participant
+              </span>
+            </div>
+          </div>
+
+          <!-- Secondary Grid: Certifications -->
+          <div class="cert-duo-grid">
+            
+            <!-- Certificate 1: Python -->
+            <!-- EDITABLE: Replace with your certificate details -->
+            <div class="cert-sub-card reveal">
+              <div class="card-glow-layer"></div>
+              <div class="cert-header">
+                <div class="cert-icon-frame icon-cyan">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="cert-meta">
+                  <span class="cert-provider">HackerRank / Coursera</span>
+                  <span class="cert-date">2024</span>
+                </div>
+              </div>
+              <h4 class="cert-name">Python Programming Essentials</h4>
+              <p class="cert-details">
+                Comprehensive assessment covering core syntax, data structures, control structures, functional programming, and practical debugging methods.
+              </p>
+              <div class="cert-footer">
+                <span class="credential-tag"><i class="fa-solid fa-shield-halved"></i> Verified Credential</span>
+              </div>
+            </div>
+
+            <!-- Certificate 2: Web Dev -->
+            <!-- EDITABLE: Replace with your certificate details -->
+            <div class="cert-sub-card reveal">
+              <div class="card-glow-layer"></div>
+              <div class="cert-header">
+                <div class="cert-icon-frame icon-indigo">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="cert-meta">
+                  <span class="cert-provider">freeCodeCamp / Udemy</span>
+                  <span class="cert-date">2024</span>
+                </div>
+              </div>
+              <h4 class="cert-name">Responsive Web Design &amp; HTML5</h4>
+              <p class="cert-details">
+                Hands-on practical development covering semantic HTML5 structures, responsive layout engines (CSS Flexbox and Grid), and cross-device media queries.
+              </p>
+              <div class="cert-footer">
+                <span class="credential-tag"><i class="fa-solid fa-shield-halved"></i> Verified Credential</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         7. CONTACT (Sleek Glassmorphic Form & Direct Channels)
+         =================================================================== -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <i class="fa-regular fa-paper-plane"></i> Get In Touch
+          </div>
+          <h2 class="section-heading">Let's <span class="gradient-text">Collaborate</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtext">Have a project in mind, hackathon idea, or an internship opportunity? My inbox is always open.</p>
+        </div>
+
+        <div class="contact-dual-layout">
+          
+          <!-- Left: Direct Contact Information & Availability -->
+          <div class="contact-details-column reveal">
+            
+            <div class="contact-glass-card">
+              <div class="card-glow-layer"></div>
+              
+              <div class="contact-card-intro">
+                <h3 class="contact-card-title">Contact Channels</h3>
+                <p class="contact-card-desc">
+                  Feel free to reach out directly through email, connect on LinkedIn, or inspect my repositories on GitHub.
+                </p>
+              </div>
+
+              <div class="contact-methods-list">
+                
+                <!-- Email Item -->
+                <div class="contact-channel-item">
+                  <div class="channel-icon-box">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Direct Email</span>
+                    <a href="mailto:prathamsrivastava63@gmail.com" class="channel-link">prathamsrivastava63@gmail.com</a>
+                  </div>
+                  <button class="btn-copy-chip copy-email-btn" data-email="prathamsrivastava63@gmail.com" title="Copy to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <!-- EDITABLE: Replace [xxxxxxxx] with your phone number -->
+                <div class="contact-channel-item">
+                  <div class="channel-icon-box">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Mobile Number</span>
+                    <a href="tel:+91XXXXXXXXXX" class="channel-link">+91 [XXXXXXXXXX]</a>
+                  </div>
+                </div>
+
+                <!-- Location Item -->
+                <div class="contact-channel-item">
+                  <div class="channel-icon-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Current Location</span>
+                    <span class="channel-val">Jaipur, Rajasthan, India</span>
+                  </div>
+                </div>
+
+                <!-- University Item -->
+                <div class="contact-channel-item">
+                  <div class="channel-icon-box">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">University</span>
+                    <span class="channel-val">JECRC University, Jaipur</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Response Time Pledge -->
+              <div class="response-pledge">
+                <i class="fa-solid fa-bolt text-accent"></i>
+                <span>Typical response time: <strong>within 24 hours</strong></span>
+              </div>
+            </div>
+
+            <!-- Social Card -->
+            <div class="contact-social-tray">
+              <a href="https://github.com/prathams4iv" target="_blank" rel="noopener noreferrer" class="tray-link" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <div class="tray-meta">
+                  <span class="tray-name">GitHub</span>
+                  <span class="tray-handle">@prathams4iv</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square tray-arrow"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/pratham-srivastava-57875731b/" target="_blank" rel="noopener noreferrer" class="tray-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <div class="tray-meta">
+                  <span class="tray-name">LinkedIn</span>
+                  <span class="tray-handle">Pratham Srivastava</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square tray-arrow"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-column reveal">
+            <div class="form-container-card">
+              <div class="card-glow-layer"></div>
+
+              <div class="form-header-wrap">
+                <h3 class="form-main-heading">Send a Direct Message</h3>
+                <p class="form-sub-heading">Fill out the form below. Client-validated and Formspree/mailto ready.</p>
+              </div>
+
+              <!-- Form Alert Feedback Banner -->
+              <div id="form-alert" class="form-alert-banner hidden" role="alert"></div>
+
+              <form id="contact-form" action="https://formspree.io/f/prathamsrivastava63@gmail.com" method="POST" novalidate>
+                
+                <div class="form-row-2">
+                  <div class="form-input-group">
+                    <label for="contact-name">Full Name <span class="req-star">*</span></label>
+                    <div class="field-wrap">
+                      <i class="fa-regular fa-user field-icon"></i>
+                      <input type="text" id="contact-name" name="name" placeholder="John Doe" required autocomplete="name">
+                    </div>
+                    <span class="field-error-msg" id="name-error"></span>
+                  </div>
+
+                  <div class="form-input-group">
+                    <label for="contact-email">Email Address <span class="req-star">*</span></label>
+                    <div class="field-wrap">
+                      <i class="fa-regular fa-envelope field-icon"></i>
+                      <input type="email" id="contact-email" name="email" placeholder="john@example.com" required autocomplete="email">
+                    </div>
+                    <span class="field-error-msg" id="email-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-input-group">
+                  <label for="contact-subject">Subject <span class="req-star">*</span></label>
+                  <div class="field-wrap">
+                    <i class="fa-solid fa-tag field-icon"></i>
+                    <input type="text" id="contact-subject" name="subject" placeholder="Project Collaboration / Internship Opportunity" required>
+                  </div>
+                  <span class="field-error-msg" id="subject-error"></span>
+                </div>
+
+                <div class="form-input-group">
+                  <label for="contact-message">Your Message <span class="req-star">*</span></label>
+                  <div class="field-wrap textarea-wrap">
+                    <i class="fa-regular fa-comment-dots field-icon"></i>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Hi Pratham, I came across your portfolio and would like to discuss..." required></textarea>
+                  </div>
+                  <span class="field-error-msg" id="message-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn btn-primary btn-submit-glow">
+                  <span class="btn-text">Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       8. FOOTER (Professional Tech Footer, Socials, Back to Top)
+       =================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col-brand">
+          <a href="#home" class="nav-brand">
+            <div class="brand-monogram">PS</div>
+            <div class="brand-text">
+              <span class="brand-name">Pratham Srivastava</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            First-Year B.Tech Computer Science student at JECRC University. Focused on engineering modern frontend interfaces and robust computational foundations.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span> Available for Summer 2025/2026 Opportunities
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col-links">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education-skills">Education &amp; Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Links -->
+        <div class="footer-col-social">
+          <h4 class="footer-heading">Connect Online</h4>
+          <div class="footer-social-tray">
+            <a href="https://github.com/prathams4iv" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pratham-srivastava-57875731b/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:prathamsrivastava63@gmail.com" class="footer-social-btn" aria-label="Email" title="Email Me">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+          <span class="footer-email-text">prathamsrivastava63@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Pratham Srivastava. All rights reserved.
+        </p>
+
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Scroll back to top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
